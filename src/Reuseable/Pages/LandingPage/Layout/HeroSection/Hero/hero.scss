@@ -1,0 +1,34 @@
+.hero-container {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 812px;
+    width: 100%;
+    padding-block-start: calc(120px + 80px);
+    .hero-section {
+        gap: 80px;
+        display: flex;
+        position: relative;
+        z-index: 6;
+
+        .hero-content {
+            .section-title {
+                font-size: 6.5rem;
+                font-weight: 600;
+            }
+
+            .span {
+                display: inline-block;
+                color: var(--color);
+            }
+        }
+
+        .hero-banner {
+            display: grid;
+            grid-template-columns: 1fr 0.8fr;
+            align-items: flex-start;
+            gap: 30px;
+        }
+    }
+}

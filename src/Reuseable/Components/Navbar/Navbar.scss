@@ -1,0 +1,49 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding-block: 12px;
+    box-shadow: 0 6px 15px 0 hsla(0, 0%, 0%, 0.05);
+    z-index: 4;
+    line-height: 1.75;
+
+    .container2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+       
+
+        .logo {
+            img {
+                width: 50px;
+                object-fit: center;
+                height: 50px;
+            }
+        }
+
+        .navbar, .header-actions, .wrapper {
+            display: flex;
+            justify-content: space-between;
+
+            gap: 15px;
+
+            align-items: center;
+            z-index: 2;
+            transition: 0.25s var(--cubic-in);
+        }
+
+        .navbar-list {
+            display: flex; 
+            gap: 50px;
+        }
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}

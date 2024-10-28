@@ -1,0 +1,766 @@
+.signups-section {
+    &.light-theme {
+        --text-color: #000;
+        --main-hue: 208;
+        --main-hue-2: 0;
+        --main-hue-3: 213;
+        --main-hue-4: 168;
+        --form-transition: 1s cubic-bezier(0.4, 0.1, 0.4, 1) !important;
+        --main-color-2: hsl(var(--main-hue), 92%, 54%);
+        --main-color: var(--green);
+        --main-color-hover: hsl(var(--main-hue), 92%, 54%);
+        --nav-color: hsl(var(--main-hue), 17%, 79%);
+        --bg-color: #f9f9f9;
+        --light-text-color: #9ca7b6;
+        --light-main-color: hsl(var(--main-hue), 91%, 55%);
+        --border-color: hsl(var(--main-hue-2), 56.6%, 44.3%);
+        --input-bg: hsla(var(--main-hue-3), 50%, 50%, 6.5%);
+        --input-bg-hover: hsla(var(--main-hue-3), 50%, 50%, 14%);
+        --input-text: #d5d7da;
+        --input-shadow: hsla(var(--main-hue-3), 92%, 54%, 0.169);
+        --form-bg-opacity: 0;
+        --checkbox-color: #f0f0f0;
+        --form-bg-color: transparent;
+        --transform-img: translate(-50%, -50%) scale(1.4);
+        --icon-check-color: var(--main-color);
+    }
+
+    .signups-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color: #f6f6f9;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 2000px;
+            height: 2000px;
+            border-radius: 50%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url("./img/Bg-for-army.jpg");
+            background-position: 60% 100%;
+
+            top: -10%;
+            right: 48%;
+            transform: translateY(-50%);
+            z-index: 6;
+            transition: 1.8s ease-in-out;
+        }
+        .signups-forms {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+
+            .signin-signup {
+                position: absolute;
+                top: 50%;
+                left: 73%;
+                transform: translate(-50%, -50%);
+                width: 40.5%;
+                display: grid;
+                grid-template-columns: 1fr;
+                z-index: 5;
+                transition: 1s 0.7s ease-in-out;
+                margin: 0 2rem;
+                background-color: var(--color-white);
+                border-radius: var(--card-border-radius);
+                box-shadow: 0 2rem 3rem var(--color-light);
+                cursor: pointer;
+
+                &:hover {
+                    box-shadow: none !important;
+                }
+
+                &::before {
+                    content: "";
+
+                    position: absolute;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    border: 1px solid var(--primary-yellow);
+                    background: 
+                    // linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
+                    // url('./img/child\ \(7\).jpg');
+                        url("./img/na-logo.webp");
+                    background-position: center;
+                    background-size: cover;
+                    top: 0%;
+                    right: 0%;
+                    transform: translateY(-50%);
+                    z-index: 6;
+                    transition: 1.8s ease-in-out;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    background: url("./img/nms-logo.webp");
+                    background-position: center;
+                    background-size: cover;
+                    bottom: -7%;
+                    right: 96%;
+                    border: 1px solid var(--green);
+                    transform: translateY(-50%);
+                    z-index: 6;
+                    transition: 1.8s ease-in-out;
+                }
+
+                &.effect-mode {
+                    &::before {
+                        transform: translate(100%, -50%);
+                        right: 100%;
+                        background: url("./img/nms-logo.webp");
+                        background-position: center;
+                        background-size: cover;
+                        border: 1px solid var(--green);
+                    }
+
+                    &::after {
+                        transform: translate(100%, -50%);
+                        right: 4%;
+                        background: url("./img//na-logo.webp");
+                        background-position: center;
+                        background-size: cover;
+                        border: 1px solid var(--primary-yellow);
+                    }
+                }
+
+                .sign-line {
+                    position: absolute;
+                    width: 99%;
+                    height: 5px;
+                    border: 1px solid rgb(177 49 49);
+                    background: rgb(177 49 49);
+                    top: -15px;
+                    left: -14.5px;
+                    z-index: 1;
+
+                    &.l2 {
+                        transform: rotate(90deg);
+                        transform-origin: left;
+                        max-width: 420.78px;
+                        top: -17px;
+                        width: 94.5%;
+                    }
+                }
+
+                .sign-form {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    padding: 0 5rem;
+                    overflow: hidden;
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                    transition: 0.2s 0.7s ease-in-out;
+                    position: relative;
+
+                    .back-link {
+                        cursor: pointer;
+
+                        font-size: 13.5px;
+
+                        font-weight: 300;
+                        color: #131212 !important;
+                        text-transform: capitalize;
+
+                        transition: 0.6s ease-in-out;
+
+                        &:hover {
+                            color: var(--pink);
+                        }
+                    }
+
+                    .back-link-s {
+                        cursor: pointer;
+                        align-self: flex-start;
+                        position: absolute;
+                        top: 16px;
+                        left: 10rem;
+                        transition: 0.4s ease;
+
+                        &:hover {
+                            color: var(--pink);
+                        }
+                    }
+
+                    &.sign-in-form {
+                        z-index: 16 !important;
+                    }
+
+                    &.sign-up-form {
+                        z-index: 1;
+                        opacity: 0;
+                    }
+
+                    .sign-title {
+                        font-size: 1.7rem;
+                        color: #070707;
+                        letter-spacing: 0.9px;
+                        margin-bottom: 10px;
+                    }
+
+                    .signinput-section {
+                        position: relative;
+                        width: 100%;
+                        .signinput-container {
+                            position: relative;
+                            width: 100%;
+                            .signinput-wrapper {
+                                position: relative;
+                                width: 100%;
+                                margin-top: 20px;
+                                .signinput-textarea {
+                                    position: relative;
+                                    border: 2px solid transparent;
+                                    box-shadow: 0 0 0 0px var(--input-shadow);
+                                    width: 100%;
+                                    background-color: var(--input-bg);
+                                    border: none;
+                                    padding: 1.5rem 1.35rem calc(0.75rem - 2px) 1.35rem;
+                                    outline: none;
+                                    border: none;
+                                    font-family: inherit;
+                                    border-radius: 10px;
+                                    color: var(--text-color);
+                                    font-weight: 600;
+                                    font-size: 0.95rem;
+                                    transition: 0.3s;
+
+                                    &:hover {
+                                        background-color: var(--input-bg-hover);
+                                    }
+                                }
+
+                                label {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: calc(1.35rem + 2px);
+                                    transform: translateY(-50%);
+                                    color: var(--light-text-color);
+                                    pointer-events: none;
+                                    transition: 0.25s;
+                                }
+
+                                svg {
+                                    position: absolute;
+                                    right: calc(1.35rem + 2px);
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    pointer-events: none;
+                                    color: var(--input-text);
+                                    font-size: 1.25rem;
+                                    transition: 0.3s;
+                                }
+
+                                &.focus {
+                                    .signinput-textarea {
+                                        background-color: var(--bg-color);
+                                        border: 2px solid var(--border-color);
+                                        box-shadow: 0 0 0 5px hsla(var(--main-hue-2), 56.6%, 44.3%, 3%);
+                                    }
+
+                                    label {
+                                        color: var(--main-color) !important;
+                                    }
+
+                                    svg {
+                                        color: var(--main-color) !important;
+                                    }
+                                }
+
+                                &.not-empty {
+                                    label {
+                                        font-size: 0.66rem;
+                                        top: 0.75rem;
+                                        transform: translateY(0);
+                                    }
+                                }
+                            }
+
+                            .view-passwords {
+                                position: absolute;
+                                top: 20px;
+                                right: 20px;
+                                svg {
+                                    font-size: 1.25rem;
+                                    transition: 0.3s;
+                                    color: var(--input-text);
+
+                                    &.passwordsvg {
+                                        color: var(--main-color) !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .social-text {
+                        padding: 0.7rem 0;
+                        font-size: 0.9rem;
+                    }
+
+                    .social-media {
+                        display: flex;
+                        justify-content: center;
+                        .social-icon {
+                            height: 46px;
+                            width: 46px;
+                            border: 1px solid #333;
+                            margin: 0 0.45rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            text-decoration: none;
+                            color: #333;
+                            font-size: 1.1rem;
+                            border-radius: 50%;
+                            transition: 0.3s;
+
+                            &:hover {
+                                color: var(--dimpink);
+                                border-color: var(--dimpink);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .panels-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .panel {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: space-around;
+                text-align: center;
+                z-index: 7;
+
+                .sign-content {
+                    color: #fff;
+                    transition: 0.9s 0.6s ease-in-out;
+                    margin: -2rem 0 1rem 0;
+                    h3 {
+                        font-weight: 600;
+                        line-height: 1;
+                        font-size: 1.5rem;
+                        color: #fff;
+                        text-shadow: 1px #222222;
+                    }
+
+                    p {
+                        font-size: 0.95rem;
+                        padding: 0.7rem 0;
+                        text-shadow: 1px #222222;
+                    }
+                }
+
+                &.left-panel {
+                    pointer-events: all;
+                    padding: 3rem 17% 2rem 12%;
+                }
+
+                &.right-panel {
+                    pointer-events: none;
+                    padding: 3rem 12% 2rem 17%;
+                    .sign-content {
+                        transform: translateX(800px);
+                    }
+
+                    .sign-image {
+                        transform: translateX(800px);
+                    }
+                }
+            }
+        }
+
+        .sign-btn {
+            width: 100%;
+            height: 49px;
+            border: none;
+            outline: none;
+            border-radius: 49px;
+            cursor: pointer;
+            color: #fff;
+            background-color: var(--green);
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: 10px 0;
+            transition: 0.5s;
+            text-align: center;
+
+            &:hover {
+                background-color: hsl(0, 56.5%, 44.3%);
+            }
+
+            &.transparent {
+                margin: 0;
+                background: none;
+                border: 2px solid #fff;
+                width: 130px;
+                height: 41px;
+                font-weight: 600;
+                font-size: 0.8rem;
+                transition: all 0.4s ease;
+                cursor: pointer;
+
+                &:hover {
+                    transform: translateY(-10px);
+                    border: 2px solid var(--pink);
+                    margin-top: 1rem;
+                }
+            }
+        }
+
+        .sign-image {
+            width: 100%;
+            transition: 1.1s 0.4s ease-in-out;
+            display: none;
+        }
+
+        /* Animation */
+
+        &.sign-up-mode {
+            &::before {
+                transform: translate(100%, -50%);
+                right: 52%;
+            }
+
+            .panels-container {
+                .panel {
+                    &.left-panel {
+                        pointer-events: none;
+                        .sign-image {
+                            transform: translateX(-800px);
+                        }
+
+                        .sign-content {
+                            transform: translateX(-800px);
+                        }
+                    }
+
+                    &.right-panel {
+                        pointer-events: all;
+                        .sign-image {
+                            transform: translateX(0px);
+                        }
+
+                        .sign-content {
+                            transform: translateX(0px);
+                        }
+                    }
+                }
+            }
+
+            .signin-signup {
+                left: 22%;
+            }
+
+            .sign-line {
+                left: initial !important;
+                right: -14.5px;
+                &.l2 {
+                    bottom: -45px !important;
+                    transform: rotate(90deg) !important;
+                    transform-origin: right !important;
+                    top: 96% !important;
+                    width: 74.5% !important;
+                    max-width: 399.78px;
+                }
+            }
+
+            .sign-form {
+                &.sign-in-form {
+                    z-index: 12 !important;
+                    opacity: 0 !important;
+                }
+
+                &.sign-up-form {
+                    z-index: 17 !important;
+                    opacity: 1 !important;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 870px) {
+    .signups-section {
+        .signups-container {
+            min-height: 800px;
+            height: 100vh;
+
+            &::before {
+                width: 1700px;
+                height: 1700px;
+                left: 30%;
+                bottom: 63%;
+                transform: translateX(-50%);
+                right: initial;
+                top: initial;
+                transition: 2s ease-in-out;
+            }
+            .signups-forms {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+
+                .signin-signup {
+                    width: 100%;
+                    left: 46.4%;
+                    top: 95%;
+                    transform: translate(-50%, -100%);
+                    transition: 1s 0.8s ease-in-out;
+                    .sign-form {
+                        padding: 0 2rem;
+
+                        .back-link-s {
+                            cursor: pointer;
+                            align-self: flex-start;
+                            position: absolute;
+                            top: 13px;
+                            left: 6rem;
+                        }
+                    }
+                    &::before {
+                        width: 50px;
+                        height: 50px;
+                        background-position: center;
+                        background-size: cover !important;
+
+                        top: 0%;
+                        right: 2%;
+                    }
+
+                    &::after {
+                        width: 50px;
+                        height: 50px;
+                        background-position: center;
+                        background-size: cover !important;
+
+                        bottom: -7%;
+                        right: 93%;
+                    }
+
+                    &.effect-mode {
+                        &::before {
+                            transform: translate(100%, -50%);
+                            right: 98%;
+
+                            background-position: center;
+                            background-size: cover !important;
+                        }
+
+                        &::after {
+                            transform: translate(100%, -50%);
+                            right: 7%;
+
+                            background-position: center;
+                            background-size: cover !important;
+                        }
+                    }
+                }
+            }
+
+            .panels-container {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 2fr 1fr;
+                .panel {
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                    padding: 2.5rem 8%;
+
+                    .sign-content {
+                        padding-right: 15%;
+                        transition: 0.9s 0.8 ease-in-out;
+
+                        h3 {
+                            font-size: 1.2rem;
+                        }
+
+                        p {
+                            font-size: 0.7rem;
+                            padding: 0.5rem 0;
+                        }
+                    }
+
+                    &.left-panel {
+                        grid-row: 1/2;
+                    }
+
+                    &.right-panel {
+                        grid-row: 3/4;
+                        .sign-content {
+                            transform: translateY(300px);
+                        }
+                        .sign-image {
+                            transform: translateY(300px);
+                        }
+                    }
+                }
+            }
+
+            .sign-btn {
+                &.transparent {
+                    width: 110px;
+                    height: 35px;
+                    font-size: 0.7rem;
+                }
+            }
+
+            .sign-image {
+                width: 200px;
+                transition: 0.9s 0.6s ease-in-out;
+            }
+
+            /* Animation */
+
+            &.sign-up-mode {
+                &::before {
+                    transform: translate(-50%, 100%);
+                    bottom: 32%;
+                    right: initial;
+                }
+
+                .panels-container {
+                    .panel {
+                        &.left-panel {
+                            .sign-image {
+                                transform: translateY(-300px);
+                            }
+
+                            .sign-content {
+                                transform: translateY(-300px);
+                            }
+                        }
+
+                        &.right-panel {
+                            .sign-image {
+                                transform: translateY(-40px);
+                            }
+                        }
+                    }
+                }
+
+                .signin-signup {
+                    top: 5%;
+                    transform: translate(-50%, 0);
+                    left: 46.4%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    .signups-section {
+        .signups-container {
+            &::before {
+                bottom: 68%;
+                left: 50%;
+                width: 1500px;
+                height: 1500px;
+            }
+            .signups-forms {
+                padding: 0 1.5rem;
+
+                .signin-signup {
+                    left: 44%;
+                    &.signform-mtop {
+                        margin-top: 2.4rem;
+                    }
+
+                    .sign-form {
+                        .back-link-s {
+                            cursor: pointer;
+                            align-self: flex-start;
+                            position: absolute;
+
+                            left: 4rem;
+                        }
+                    }
+                }
+            }
+
+            .panels-container {
+                .panel {
+                    .sign-content {
+                        padding: 0.5rem 1rem;
+                    }
+                }
+            }
+
+            .sign-btn {
+                &.transparent {
+                    width: 110px;
+                    height: 35px;
+                    font-size: 0.7rem;
+                }
+            }
+
+            .sign-image {
+                display: none;
+            }
+
+            /* Animation */
+
+            &.sign-up-mode {
+                &::before {
+                    bottom: 28%;
+                    left: 50%;
+                }
+
+                .panels-container {
+                    .panel {
+                        &.left-panel {
+                            .sign-image {
+                                transform: translateY(-300px);
+                            }
+
+                            .sign-content {
+                                transform: translateY(-300px);
+                            }
+                        }
+                    }
+                }
+
+                .signin-signup {
+                    top: 5%;
+                    transform: translate(-50%, 0);
+                    left: 44%;
+                }
+            }
+        }
+    }
+}
+
+.remember-check {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 0.4rem;
+
+
+}
