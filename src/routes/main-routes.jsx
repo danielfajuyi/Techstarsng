@@ -5,10 +5,10 @@ import Navbar from "../components/navbar/navbar";
 import AboutPage from "../pages/about_page/about_page";
 import FaqsPage from "../pages/faqs_page/faqs_page";
 import Homepage from "../pages/homepage/homepage";
-import HowitworksPage from "../pages/howitworks_page/howitworks_page";
 import LoginPage from "../pages/login_page/login-page";
 import NotfoundPage from "../pages/notfound_page/notfound_page";
 import SignupPage from "../pages/signup_page/signup_page";
+import AffliateProgramPage from "../pages/affliateprogram_page/affliateprogram";
 
 const MainRoutes = () => {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -37,18 +37,17 @@ const MainRoutes = () => {
           element: <AboutPage />,
         },
         {
-          path: "contact",
-          element: <ContactPage />,
-        },
-
-        {
           path: "faqs",
           element: <FaqsPage />,
         },
 
         {
-          path: "howitworks",
-          element: <HowitworksPage />,
+          path: "affiliate-program",
+          element: <AffliateProgramPage />,
+        },
+        {
+          path: "contact",
+          element: <ContactPage />,
         },
       ],
     },

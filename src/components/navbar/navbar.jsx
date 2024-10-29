@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./navbar.scss";
 import "../../assets/scss/style.css";
-import logo from "../../assets/images/jivipay-logo/jivipay-logo.png";
+import logo from "../../assets/images/logo.png";
 import { FaBars, FaHome } from "react-icons/fa";
 const Navbar = () => {
   // fixed Header
@@ -32,30 +32,28 @@ const Navbar = () => {
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="/about">About</a>
+                <a href="/about">About Us</a>
               </li>
               <li>
-                <a href="/features">Features</a>
-              </li>
-              <li>
-                <a href="faq">Faqs</a>
-              </li>
-              <li>
-                <a href="/pricing">Pricing</a>
-              </li>
-              <li>
-                <a href="/howitworks">How It Works </a>
-              </li>
-              <li>
-                <a href="/contact">Contact</a>
-              </li>
-              <li>
-                <button className="home-btn">Login</button>
+                <a href="/faqs">FAQs</a>
               </li>
 
               <li>
-                <button className="home-btn">Register</button>
+                <a href="/affiliate-program">Affiliate Program</a>
               </li>
+
+              <li>
+                <a href="/contact">Contact Us</a>
+              </li>
+              <div style={{ display: "flex" }}>
+                <li>
+                  <button className="home-btn">Login</button>
+                </li>
+
+                <li>
+                  <button className="home-btn">Register</button>
+                </li>
+              </div>
             </ul>
 
             <button className="toggle" onClick={() => setMobile(!Mobile)}>

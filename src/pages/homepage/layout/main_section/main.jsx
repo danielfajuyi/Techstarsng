@@ -5,9 +5,7 @@ import Features from "../../component/features/features";
 const Main = () => {
   return (
     <>
-      <main>
-        <Features />
-      </main>
+      <main>main section</main>
     </>
   );
 };
