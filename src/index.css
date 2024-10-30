@@ -30,61 +30,6 @@
   --font-family-roboto: "Roboto";
 }
 
-/* fonts */
-@font-face {
-  font-family: "Roboto";
-  src: url(./Assets/fonts/roboto/Roboto-Light.woff2) format(woff2);
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url(./Assets//fonts//roboto/Roboto-Regular.woff2) format(woff2);
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url(./Assets/fonts/roboto/Roboto-Medium.woff2) format(woff2);
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url(./Assets/fonts/roboto/Roboto-Bold.woff2);
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url(./Assets/fonts/roboto/Roboto-Black.woff2) format(woff2);
-  font-weight: 900;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url(./Assets/fonts/poppins/Poppins-Light.woff2) format(woff2);
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url(./Assets/fonts/poppins/Poppins-Regular.woff2) format(woff2);
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url(./Assets/fonts/poppins/Poppins-Medium.woff2);
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url(./Assets/fonts/poppins/Poppins-Bold.woff2);
-  font-weight: 700;
-}
-
 a {
   text-decoration: none;
 }
@@ -106,7 +51,7 @@ body {
 body {
   max-width: 1440px;
   margin: auto;
-  font-family: var(--font-family-poppins);
+  font-family: "Nunito", sans-serif;
   background: white;
   color: var(--dark-text);
 }
