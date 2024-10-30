@@ -4,12 +4,16 @@ import Hero from "./layout/hero_section/hero";
 import Main from "./layout/main_section/main";
 import Footer from "./layout/footer_section/footer";
 
+
 const AboutPage = () => {
   return (
     <>
-      <Hero />
-      <Main />
-      <Footer />
+    <main className="app">
+ <Hero />
+  <Main  />
+  <Footer />
+    </main>
+  
     </>
   );
 };

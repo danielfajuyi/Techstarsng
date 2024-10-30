@@ -1,6 +1,52 @@
-.hero-section {
-    width: 100%;
-    position: relative;
-    top: 0;
-    left: 0;
+.container{
+    // height: 100vh;
+    margin: 0;
+    padding: 30px;
 }
+
+.hero-section{
+    width: 100%;
+}
+
+.hero-section h2{
+font-family: Nunito, sans-serif;
+font-size: 50px;
+font-weight: 700;
+line-height: 50px;
+margin: 5px 0px 0px 20px;
+color: #101010;
+line-height: 50px;
+}
+
+.blog-image {
+    width: 600px;
+    height: 260px;
+    border-radius: 12px;
+    background: #0000001F;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+}
+
+.blog-container{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    padding: 10px 0px 0px 10px;
+}
+
+.text {
+    width: 535px;
+    color: #777777;
+    line-height: 34px;
+    font-size: 19px;
+    font: Nunito, sans-serif;
+    
+}
+
+.u{
+    text-transform: uppercase;
+    margin-left: 10px;
+    font-size: 48px;
+}
+
