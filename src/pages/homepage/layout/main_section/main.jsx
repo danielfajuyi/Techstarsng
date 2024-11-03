@@ -1,6 +1,5 @@
 import React from "react";
 import "./main.scss";
-import main02 from "../../../../assets/images/main02.png";
 import { features } from "../../../../assets/data/data";
 import earnings01 from "../../../../assets/images/earnings01.png";
 import earnings02 from "../../../../assets/images/earnings02.png";
