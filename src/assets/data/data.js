@@ -1,3 +1,9 @@
+import mainImg01 from "../images/main02.png";
+import mainImg02 from "../images/main03.png";
+import howitworks01 from "../images/howitworks01.png";
+import howitworks02 from "../images/howitworks02.png";
+import howitworks03 from "../images/howitworks03.png";
+
 export const links = [
   {
     id: 1,
@@ -33,29 +39,44 @@ export const links = [
 export const features = [
   {
     id: 1,
-    headertext: "Savings",
-    paragraphtext:
-      "Reach your Long/Short time goal by saving conveniently as JiviPay help you reach that goals within a short period of time. Join over 10,000 happy users that are on the same saving quest. ",
+    mainDesc: "For Clients",
+    mainText: "Hire Professional Talents",
+    paragraphText:
+      "Collaborate with an extensive community of skilled freelancers to accomplish tasks—whether it's fast-paced projects or substantial transformations.",
+    buttonText: "Hire Talents",
+    mainImg: mainImg01,
   },
 
   {
     id: 2,
-    headertext: "Save and Secure",
-    paragraphtext:
-      "We understand that trust is an essential element of customer relationships. which is why we use the most trusted form of internet security to guide your data jealously to ensure dat safety from internet fraudsters.",
+    mainDesc: "For Freelancers",
+    mainText: "Browse for your job choice",
+    paragraphText:
+      "Connect with inspiring clients who fuel your enthusiasm and elevate your career or business to unprecedented levels.",
+    buttonText: "Find Jobs",
+    mainImg: mainImg02,
+  },
+];
+
+export const howitworks = [
+  {
+    id: 1,
+    mainDesc: "1. Sign Up",
+    mainText: "Sign Up to get a Free Account",
+    mainImg: howitworks01,
   },
 
   {
     id: 3,
-    headertext: "Contribution",
-    paragraphtext:
-      "Start that business idea small and let us help you grow it with our contribution feature. Giving you access to hundreds of people in our network willing to enter into contribution with you. growing together. ",
+    mainDesc: "1. Share",
+    mainText: "Share Zealworkers with Family and Friends",
+    mainImg: howitworks02,
   },
 
   {
-    id: 4,
-    headertext: "Collaboration",
-    paragraphtext:
-      "Start that business idea small and let us help you grow it with our contribution feature. Giving you access to hundreds of people in our network willing to enter into contribution with you. growing together. ",
+    id: 3,
+    mainDesc: "1. Earn Commision",
+    mainText: "Start earning when the client funds a project.",
+    mainImg: howitworks03,
   },
 ];
